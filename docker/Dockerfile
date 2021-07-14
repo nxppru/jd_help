@@ -22,10 +22,12 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && cp -f .env.example .env \
     && chmod 777 ${QL_DIR}/shell/*.sh \
     && chmod 777 ${QL_DIR}/docker/*.sh \
+	&& npm install canvas --build-from-source \
     && npm install -g cnpm \
 	&& cnpm rebuild node-sass \
 	&& cnpm install \	
     && cnpm install -g pnpm \
+	&& pnpm install -g pm2 \
     && rm -rf /root/.npm \
     && pnpm install --prod \
     && rm -rf /root/.pnpm-store     
