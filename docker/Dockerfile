@@ -11,7 +11,7 @@ WORKDIR ${QL_DIR}
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update -f \
     && apk upgrade \
-    && apk --no-cache add -f bash coreutils moreutils git curl wget tzdata perl openssl nginx python3 jq openssh prettier libc6-compat \
+    && apk --no-cache add -f bash coreutils moreutils git curl wget tzdata perl openssl nginx python3 jq openssh build-base g++ cairo-dev pango-dev giflib-dev prettier libc6-compat \
     && rm -rf /var/cache/apk/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
@@ -23,6 +23,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && chmod 777 ${QL_DIR}/shell/*.sh \
     && chmod 777 ${QL_DIR}/docker/*.sh \
     && npm install -g cnpm \
+	&& cnpm rebuild node-sass \
 	&& cnpm install \	
     && cnpm install -g pnpm \
     && rm -rf /root/.npm \
