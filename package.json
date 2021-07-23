@@ -52,10 +52,8 @@
     "tough-cookie": "^4.0.0",
     "tunnel": "0.0.6",
     "@types/node": "^14.11.2",
-    "ws": "^7.4.3"
-	},
-  "devDependencies": {
-    "@ant-design/pro-layout": "^6.5.0",
+    "ws": "^7.5.3",
+	"@ant-design/pro-layout": "^6.5.0",
     "@ant-design/icons": "^4.6.2",
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.8",
