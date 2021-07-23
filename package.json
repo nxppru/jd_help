@@ -39,9 +39,7 @@
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.8.0",
     "lodash": "^4.17.21",
-    "winston": "^3.3.3"
-  },
-  "devDependencies": {
+    "winston": "^3.3.3",
     "@ant-design/icons": "^4.6.2",
     "@ant-design/pro-layout": "^6.5.0",
     "@types/cors": "^2.8.10",
