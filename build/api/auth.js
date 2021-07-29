@@ -44,14 +44,14 @@ exports.default = (app) => {
                     if (authInfo.username === 'admin' &&
                         authInfo.password === 'adminadmin') {
                         const newPassword = util_1.createPassword(16, 22);
-                        fs.writeFileSync(config_1.default.authConfigFile, JSON.stringify({
-                            username: authInfo.username,
-                            password: newPassword,
-                        }));
-                        return res.send({
-                            code: 100,
-                            msg: '已初始化密码，请前往auth.json查看并重新登录',
-                        });
+//                        fs.writeFileSync(config_1.default.authConfigFile, JSON.stringify({
+//                            username: authInfo.username,
+//                            password: newPassword,
+//                        }));
+//                        return res.send({
+//                            code: 100,
+//                            msg: '已初始化密码，请前往auth.json查看并重新登录',
+//                        });
                     }
                     if (username == authInfo.username &&
                         password == authInfo.password) {

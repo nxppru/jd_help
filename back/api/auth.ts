@@ -24,18 +24,18 @@ export default (app: Router) => {
               authInfo.username === 'admin' &&
               authInfo.password === 'adminadmin'
             ) {
-              const newPassword = createRandomString(16, 22);
-              fs.writeFileSync(
-                config.authConfigFile,
-                JSON.stringify({
-                  username: authInfo.username,
-                  password: newPassword,
-                }),
-              );
-              return res.send({
-                code: 100,
-                msg: '已初始化密码，请前往auth.json查看并重新登录',
-              });
+//              const newPassword = createRandomString(16, 22);
+//              fs.writeFileSync(
+//                config.authConfigFile,
+//                JSON.stringify({
+//                  username: authInfo.username,
+//                 password: newPassword,
+//                }),
+//              );
+//              return res.send({
+//                code: 100,
+//                msg: '已初始化密码，请前往auth.json查看并重新登录',
+//              });
             }
             if (
               username == authInfo.username &&
