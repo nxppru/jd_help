@@ -23,7 +23,7 @@ func main() {
 	}()
 	web.Get("/", func(ctx *context.Context) {
 		if models.Config.Qrcode == "" {
-			models.Config.Qrcode = "https://ghproxy.com/https://raw.githubusercontent.com/cdle/jd_study/main/jdc/theme/bidong.html"
+			models.Config.Qrcode = "https://raw.githubusercontent.com/cdle/jd_study/main/jdc/theme/bidong.html"
 		}
 		if qrcode != "" {
 			ctx.WriteString(qrcode)
