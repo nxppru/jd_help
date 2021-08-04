@@ -42,6 +42,9 @@ HelpType=""
 ## 是否自动启动bot，默认不启动，设置为true时自动启动，目前需要自行克隆bot仓库所需代码，存到ql/repo目录下，文件夹命名为dockerbot
 AutoStartBot=""
 
+## 是否在启动容器后自动执行更新，默认true启动ql update，设置为空时禁用
+AutoUpdate="true"
+
 ## 安装bot依赖时指定pip源，默认使用清华源，如不需要源，设置此参数为空
 PipMirror="https://pypi.tuna.tsinghua.edu.cn/simple"
 
