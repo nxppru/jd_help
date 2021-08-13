@@ -23,7 +23,7 @@ echo -e "复制一份 $file_notify_js_sample 为 $file_notify_js\n"
 cp -fv $file_notify_js_sample $file_notify_js
 
 echo -e "4. 开始更新py依赖\n"
-update_depend $dir_root
+pip3 install -r $dir_scripts/requirements.txt
 echo -e "py依赖更新完成\n"
 
 echo -e "通知文件复制完成\n"
